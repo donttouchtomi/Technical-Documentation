@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Technical Documentation</title>
+</head>
+
+<body>
+    <nav id="navbar">
+        <header>HTML Documentation</header>
+        <ul>
+            <li><a href="#html_basics" class="nav-link">HTML Basics</a></li>
+            <li><a href="#html_page_structure" class="nav-link">HTML Page Structure</a></li>
+            <li><a href="#html_header" class="nav-link">HTML Header</a></li>
+            <li><a href="#html_document_body" class="nav-link">HTML Document Body</a></li>
+            <li><a href="#conclusion" class="nav-link">Conclusion</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="html_basics">
+            <header>HTML Basics</header>
+            <article>
+                <p>HTML is a standard defined by the WHATWG, an acronym for Web Hypertext Application Technology Working
+                    Group, an organization formed by people working on the most popular web browser. This means it's
+                    basically controlled by Google, Mozilla, Apple and Microsoft.</p>
+
+                <p>In the past the W3C (World Wide Web Consortium) was the organization in charge of creating the HTML
+                    standard.</p>
+
+                <p>The control informally moved from W3C to WHATWG when it became clear that the W3C push towards XHTML
+                    was
+                    not a good idea.</p>
+
+                <p>If you've never heard of XHTML, here's a short story. In the early 2000s, we
+                    all believed the future of the Web was XML (seriously). So HTML moved
+                    from being an SGML-based authoring language to an XML markup language.
+                </p>
+
+                <p>It was a big change. We had to know, and respect, more rules. Stricter rules.</p>
+
+                <p>Eventually browser vendors realized this was not the right path for the Web,
+                    and they pushed back, creating what is now known as HTML5.</p>
+                <p>W3C did not really agree on giving up control of HTML, and for years we had
+                    2 competing standards, each one aiming to be the official one. Eventually on
+                    28 May 2019 it was made official by W3C that the "true" HTML version was
+                    the one published by WHATWG.</p>
+                <p>HTML5 is a term that now defines a whole set of technologies, which
+                    includes HTML but adds a lot of APIs and standards like WebGL, SVG and
+                    more.</p>
+                <p>The key thing to understand here is this: there is no such thing (any more) as
+                    an HTML version now.</p>
+                <p>HTML is the markup language we use to structure content that we consume
+                    on the Web.
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="html_page_structure">
+            <header>HTML Page structure</header>
+            <article>
+                <ul>
+                    <li><strong>Page Structure</strong>
+                        Things start with the Document Type Declaration (aka doctype), a way to tell
+                        the browser this is an HTML page, and which version of HTML we are using. Then we have the html
+                        element, which has an opening and closing tag: we also have the head and body element.
+                    </li>
+                    <li><strong>Tags vs elements</strong>
+                        Elements have a starting tag and a closing tag</li>
+                    <li><strong>Attributes</strong>
+                        The starting tag of an element can have special snippets of information we can attach, called
+                        attributes. Attributes have the key="value" syntax:</li>
+                    <li><strong> Case insensitive</strong>
+                        HTML is case insensitive. Tags can be written in all caps, or lowercase. In the early days, caps
+                        were the norm. Today lowercase is the norm. It is a convention</li>
+                    <li><strong>White space</strong>
+                        Pretty important. In HTML, even if you add multiple white spaces into a line,
+                        it's collapsed by the browser's CSS engine.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="html_header">
+            <header>HTML Header</header>
+            <article>
+                Inside the Document we have the Document Heading
+                <ul>
+                    <li><strong>The "title" tag</strong>
+                        The title tag determines the page title. The title is displayed in the
+                        browser, and it's especially important as it's one of the key factors for Search
+                        Engine Optimization (SEO).</li>
+                    <li><strong>The "script" tag</strong>
+                        This tag is used to add JavaScript into the page.
+                        You can include it inline, using an opening tag, the JavaScript code and then
+                        the closing tag:
+                        <pre>
+                            <code>
+                                &lt;script>
+                                    ..some JS
+                                &lt;/script>
+                            </code>
+                        </pre>
+                        Or you can load an external JavaScript file by using the src attribute:
+                        <pre>
+                            <code>
+                                &lt;script src="file.js">&lt;script>
+                            </code>
+                        </pre>
+                    </li>
+                    <li><strong>The "noscript" tag</strong>
+                        This tag is used to detect when scripts are disabled in the browser. It is used differently
+                        depending on whether it's put in the document head or
+                        in the document body.</li>
+                    <li><strong>The "link" tag</strong>
+                        The link tag is used to set relationships between a document and other
+                        resources.
+                        It's mainly used to link an external CSS file to be loaded.
+                        This element has no closing tag.
+                        Usage:
+                        <pre>
+                            <code>
+                                &lt;!DOCTYPE html>
+                                    &lt;html>
+                                        &lt;head>
+                                        ...
+                                        &lt;link href="file.css" rel="stylesheet"/>
+                                        ...
+                                        &lt;/head>
+                                        ...
+                                    &lt;/html>
+                            </code>
+                        </pre>
+                    </li>
+                    <li><strong>The "style" tag</strong>
+                        This tag can be used to add styles into the document, rather than loading an
+                        external stylesheet.
+                        Usage:
+                        <pre>
+                            <code>
+                                &lt;style>
+                                    ..some-css
+                                &lt;/style>
+                            </code>
+                        </pre>
+                        As with the link tag, you can use the media attribute to use that CSS only
+                        on the specified medium:
+                        <pre>
+                            <code>
+                                &lt;style media="print">
+                                .some-css {
+                                }
+                                &lt;/style>
+                            </code>
+                        </pre>
+                    </li>
+                    <li><strong>The "base" tag</strong>
+                        This tag is used to set a base URL for all relative URLs contained in the page
+                        <pre>
+                            <code>
+                                &lt;!DOCTYPE html>
+                                &lt;html>
+                                    &lt;head>
+                                    ...
+                                    &lt;base href="https://loremipsum.com/"/>
+                                    ...
+                                    &lt;/head>
+                                    ...
+                                &lt;/html>
+                            </code>
+                        </pre>
+                    </li>
+                    <li><strong>The "meta" tag</strong>
+                        Meta tags perform a variety of tasks and they are very, very important</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="html_document_body">
+            <header>HTML Document Body</header>
+            <article>
+                After the closing head tag, we can only have one thing in an HTML
+                document: the body element.
+                <pre>
+                    <code>
+                        &lt;!DOCTYPE html>
+                            &lt;html>
+                                &lt;head>
+                                ...
+                                &lt;/head>
+                                &lt;body>
+                                ...
+                                &lt;/body>
+                            &lt;/html>
+                    </code>
+                </pre>
+                Just like the head and html tags, we can only have one body tag in one
+                page.
+                Inside the body tag we have all the tags that define the content of the page.
+                Technically, the start and ending tags are optional. But I consider it a good
+                practice to add them. Just for clarity.
+                In the next chapters we'll define the variety of tags you can use inside the
+                page body.
+                But before, we must introduce a difference between block elements and
+                inline elements.
+            </article>
+        </section>
+        <section class="main-section" id="conclusion">
+            <header>Conclusion</header>
+            <p>Thanks a lot for reading this book.</p>
+        </section>
+    </main>
+</body>
+
+</html>
