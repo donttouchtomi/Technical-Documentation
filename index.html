@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- custom css link -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 
     <!-- font awesome cdn link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
@@ -21,8 +21,9 @@
 
 <body>
     <!-- side navBar link -->
+    <div class="fa-solid fa-bars" id="search"></div>
     <nav id="navbar">
-        <header>HTML Documentation</header>
+        <header>OVERVIEW</header>
         <ul>
             <li><a href="#html_basics" class="nav-link">HTML Basics</a></li>
             <li><a href="#html_page_structure" class="nav-link">HTML Page Structure</a></li>
@@ -32,6 +33,7 @@
         </ul>
     </nav>
     <main id="main-doc">
+        <!-- <div class="fa-solid fa-bars" id="search"></div> -->
         <!-- html basics section -->
         <section class="main-section" id="html_basics">
             <header>HTML Basics</header>
@@ -98,7 +100,7 @@
         <section class="main-section" id="html_header">
             <header>HTML Header</header>
             <article>
-                Inside the Document we have the Document Heading
+                <p>Inside the Document we have the Document Heading</p>
                 <ul>
                     <li><strong>The "title" tag</strong>
                         The title tag determines the page title. The title is displayed in the
@@ -193,8 +195,8 @@
         <section class="main-section" id="html_document_body">
             <header>HTML Document Body</header>
             <article>
-                After the closing head tag, we can only have one thing in an HTML
-                document: the body element.
+                <p>After the closing head tag, we can only have one thing in an HTML
+                    document: the body element.</p>
                 <pre>
                     <code>
                         &lt;!DOCTYPE html>
@@ -208,21 +210,17 @@
                             &lt;/html>
                     </code>
                 </pre>
-                Just like the head and html tags, we can only have one body tag in one
-                page.
-                Inside the body tag we have all the tags that define the content of the page.
-                Technically, the start and ending tags are optional. But I consider it a good
-                practice to add them. Just for clarity.
-                In the next chapters we'll define the variety of tags you can use inside the
-                page body.
-                But before, we must introduce a difference between block elements and
-                inline elements.
+                <p>Just like the head and html tags, we can only have one body tag in one page.</p>
+                <p>Inside the body tag we have all the tags that define the content of the page. Technically, the start
+                    and ending tags are optional. But I consider it a good practice to add them. Just for clarity.</p>
             </article>
         </section>
         <!-- conclusion section -->
         <section class="main-section" id="conclusion">
             <header>Conclusion</header>
-            <p>Thanks a lot for reading this book.</p>
+            <article>
+                <p>Thanks a lot for reading this book.</p>
+            </article>
         </section>
     </main>
 
