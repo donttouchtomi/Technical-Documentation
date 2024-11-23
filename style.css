@@ -96,6 +96,10 @@ code {
         left:  -100%;
     }
 
+    .active {
+        left:0;
+    }
+
     #main-doc {
     margin-left: 0;
 }
